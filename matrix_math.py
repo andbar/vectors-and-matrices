@@ -1,3 +1,4 @@
+# initial commit and pull request
 class ShapeException(Exception):
     pass
 
@@ -52,5 +53,3 @@ def matrix_vector_multiply():
 
 def matrix_matrix_multiply():
     pass
-
-
