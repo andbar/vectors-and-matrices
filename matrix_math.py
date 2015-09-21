@@ -12,6 +12,13 @@ def magnitude():
 
 
 def shape():
+    num_rows = len(vecmat)
+    for row in vecmat:
+        if type(row) == list:
+            num_cols = len(row)
+            return num_rows, num_cols
+        else:
+            return num_rows,
     pass
 
 
