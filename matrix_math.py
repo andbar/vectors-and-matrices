@@ -85,12 +85,26 @@ def matrix_col(matrix, col):
     return col_list
 
 
-def matrix_scalar_multiply():
-    pass
+def matrix_scalar_multiply(matrix, scalar):
+    output_matrix = []
+    for row in matrix:
+        output_row = []
+        for col in row:
+            output_row.append(col * scalar)
+        output_matrix.append(output_row)
+    return output_matrix
 
 
-def matrix_vector_multiply():
-    pass
+def matrix_vector_multiply(matrix, vector):
+    if len(matrix_row(matrix, 0)) != shape(vector)[0]:
+        raise ShapeException()
+    output_vector = []
+    for row in matrix:
+        output_row = []
+        for index, value in enumerate(row):
+            output_row.append(value * vector[index])
+        output_vector.append(sum(output_row))
+    return output_vector
 
 
 def matrix_matrix_multiply():
