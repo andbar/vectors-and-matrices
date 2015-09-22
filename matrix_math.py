@@ -96,7 +96,7 @@ def matrix_scalar_multiply(matrix, scalar):
 
 
 def matrix_vector_multiply(matrix, vector):
-    if len(matrix_row(matrix, 0)) != shape(vector)[0]:
+    if len(matrix_row(matrix, 0)) != len(vector):
         raise ShapeException()
     output_vector = []
     for row in matrix:
@@ -108,4 +108,15 @@ def matrix_vector_multiply(matrix, vector):
 
 
 def matrix_matrix_multiply():
+    def matrix_matrix_multiply(matrix1, matrix2):
+    if len(matrix_row(matrix1, 0)) != len(matrix_col(matrix2, 0)):
+        raise ShapeException()
+    output_matrix_final = []
+    for r in matrix1:
+        output_matrix = []
+        for row_index, row in enumerate(matrix2):
+            output_row = []
+            output_matrix.append(vector_multiply(row, r[row_index]))
+        output_matrix_final.append(output_matrix)
+    return output_matrix_final
     pass
