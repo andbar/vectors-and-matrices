@@ -84,6 +84,7 @@ def matrix_col(matrix, col):
         col_list.append(row[col])
     return col_list
 
+
 def matrix_add(matrix1, matrix2):
     shape_checker(matrix1, matrix2)
     added_matrix = []
