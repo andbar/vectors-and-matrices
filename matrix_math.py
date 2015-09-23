@@ -84,6 +84,21 @@ def matrix_col(matrix, col):
         col_list.append(row[col])
     return col_list
 
+def matrix_add(matrix1, matrix2):
+    shape_checker(matrix1, matrix2)
+    added_matrix = []
+    for index, value in enumerate(matrix1):
+        added_matrix.append(vector_add(matrix1[index], matrix2[index]))
+    return added_matrix
+
+
+def matrix_sub(matrix1, matrix2):
+    shape_checker(matrix1, matrix2)
+    subtract_matrix = []
+    for index, value in enumerate(matrix1):
+        subtract_matrix.append(vector_sub(matrix1[index], matrix2[index]))
+    return subtract_matrix
+
 
 def matrix_scalar_multiply(matrix, scalar):
     output_matrix = []
